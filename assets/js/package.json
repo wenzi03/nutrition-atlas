@@ -1,0 +1,6 @@
+{
+  "name": "nutrition-site-app",
+  "private": true,
+  "type": "module",
+  "description": "仅用于告知 Node 此目录下的 .js 是 ES Module（浏览器不会请求这个文件，可忽略）"
+}
