@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "updatedAt": "2026-09-21",
+  "site": {
+    "title": "营养学知识库",
+    "subtitle": "从食物到营养素，一次讲清楚",
+    "description": "以数据驱动的营养学基础科普：碳水、蛋白质、脂肪的分类体系，以及常见食物的营养对照。"
+  },
+  "nav": [
+    { "id": "overview", "label": "营养素总览", "path": "/overview" },
+    { "id": "carbs", "label": "碳水化合物", "path": "/carbs" },
+    { "id": "protein", "label": "蛋白质", "path": "/protein" },
+    { "id": "fat", "label": "脂肪", "path": "/fat" },
+    { "id": "foods", "label": "食物图谱", "path": "/foods" },
+    { "id": "quick", "label": "速查表", "path": "/quick" },
+    { "id": "faq", "label": "常见疑问", "path": "/faq" }
+  ],
+  "home": {
+    "lead": "把「食物 → 营养素 → 分类」这条链路讲清楚。所有数据都存在 JSON 文件里，改数据即改网站。",
+    "entries": [
+      {
+        "title": "营养素总览",
+        "desc": "六大营养素、宏量与微量、三大产能营养素的热量密度",
+        "path": "/overview",
+        "accent": "gray",
+        "meta": "入门先看这页"
+      },
+      {
+        "title": "碳水化合物",
+        "desc": "单糖到多糖的结构分类，精制快碳与慢碳的区别、GI 值、膳食纤维",
+        "path": "/carbs",
+        "accent": "green",
+        "meta": "含 12 项对照与速查"
+      },
+      {
+        "title": "蛋白质",
+        "desc": "9 种必需氨基酸、完全与不完全蛋白、优质蛋白清单、互补原则",
+        "path": "/protein",
+        "accent": "blue",
+        "meta": "含 10 种优质蛋白数据"
+      },
+      {
+        "title": "脂肪",
+        "desc": "饱和与不饱和、反式脂肪、Omega-3/6/9、常见油脂脂肪酸构成",
+        "path": "/fat",
+        "accent": "amber",
+        "meta": "含 8 种油脂图谱"
+      },
+      {
+        "title": "食物图谱",
+        "desc": "100 种常见食物的营养数据，支持搜索、标签筛选、数值排序与两两对比",
+        "path": "/foods",
+        "accent": "green",
+        "meta": "可搜索可对比"
+      },
+      {
+        "title": "速查表",
+        "desc": "高蛋白榜、慢碳主食清单、高 GI 避雷清单、优质脂肪来源",
+        "path": "/quick",
+        "accent": "blue",
+        "meta": "4 张榜单"
+      }
+    ],
+    "entryCard": {
+      "title": "想直接查具体食物？",
+      "desc": "食物图谱里有 100 种常见食物的完整营养数据，可以按慢碳、高蛋白、低 GI 等标签筛选，也能把两种食物并排对比。",
+      "path": "/foods",
+      "label": "打开食物图谱"
+    }
+  },
+  "sources": [
+    { "name": "中国食物成分表（第6版）", "publisher": "北京大学医学出版社", "year": 2019 },
+    { "name": "USDA FoodData Central", "url": "https://fdc.nal.usda.gov/" },
+    { "name": "悉尼大学 GI 数据库", "url": "https://www.glycemicindex.com/" },
+    { "name": "中国居民膳食指南（2022）", "publisher": "人民卫生出版社", "year": 2022 }
+  ],
+  "disclaimer": "本站内容为营养学基础科普，不构成医疗或临床营养建议。食物成分数值为参考值，实际因品种、产地、烹饪方式而异。个体健康问题请咨询医生或注册营养师。"
+}
