@@ -1,0 +1,17 @@
+{
+  "name": "nutrition-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "营养学知识网站 —— 纯前端静态页面，内容全部存放在 data/ 下的 JSON 文件中",
+  "scripts": {
+    "serve": "node tools/serve.js 8080",
+    "build": "tailwindcss -i src/input.css -o assets/css/tailwind.css --minify",
+    "watch": "tailwindcss -i src/input.css -o assets/css/tailwind.css --watch",
+    "check": "node tools/validate.js && node tools/check-imports.js",
+    "validate": "node tools/validate.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "tailwindcss": "^4.3.3"
+  }
+}
