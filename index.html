@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>营养学知识库</title>
+<meta name="description" content="以数据驱动的营养学基础科普：碳水、蛋白质、脂肪的分类体系，以及常见食物的营养对照。">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2316a34a'/><rect x='24' y='30' width='52' height='7' rx='3.5' fill='white'/><rect x='24' y='47' width='36' height='7' rx='3.5' fill='white'/><rect x='24' y='64' width='44' height='7' rx='3.5' fill='white'/></svg>">
+
+<!-- 样式：由 src/input.css 通过 Tailwind CLI 预编译而来，无需联网
+     重新构建：npm run build -->
+<link rel="stylesheet" href="assets/css/tailwind.css">
+
+<!-- 开发时若不希望执行构建步骤，可临时改用 Tailwind 浏览器版（需联网）：
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+-->
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased">
+
+<header class="sticky top-0 z-40 border-b border-gray-200 bg-white/90 backdrop-blur">
+  <div class="mx-auto flex max-w-4xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+    <a href="#/" class="shrink-0 text-base font-semibold tracking-tight text-brand-700">营养学知识库</a>
+
+    <button type="button" id="nav-toggle" aria-expanded="false" aria-controls="site-nav-mobile" class="ui-btn md:hidden">
+      目录
+    </button>
+
+    <nav id="site-nav" class="hidden md:flex md:items-center md:gap-0.5" aria-label="主导航"></nav>
+  </div>
+  <nav id="site-nav-mobile" class="hidden border-t border-gray-100 px-4 py-2 md:hidden" aria-label="主导航（移动端）"></nav>
+</header>
+
+<main id="app" class="mx-auto max-w-4xl px-4 py-8 sm:px-6 lg:px-8" aria-busy="true">
+  <p class="text-sm text-gray-400">正在加载…</p>
+</main>
+
+<footer class="mt-8 border-t border-gray-200 bg-white">
+  <div class="mx-auto max-w-4xl space-y-3 px-4 py-8 text-xs leading-relaxed text-gray-400 sm:px-6 lg:px-8">
+    <p id="footer-sources"></p>
+    <p id="footer-disclaimer"></p>
+    <p id="footer-brand" class="text-gray-300"></p>
+  </div>
+</footer>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
