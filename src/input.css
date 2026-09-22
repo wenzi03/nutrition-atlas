@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@source "../index.html";
+@source "../assets/js/**/*.js";
+
+@theme {
+  --color-brand-50: #f0fdf4;
+  --color-brand-100: #dcfce7;
+  --color-brand-200: #bbf7d0;
+  --color-brand-300: #86efac;
+  --color-brand-500: #22c55e;
+  --color-brand-600: #16a34a;
+  --color-brand-700: #15803d;
+
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* 屏幕阅读器专用：视觉隐藏但保留可访问性 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* 复用 3 次以上的组合抽成组件类，见技术文档 §7.3 */
+.ui-card {
+  @apply rounded-xl border border-gray-200 bg-white p-5;
+}
+
+.ui-badge {
+  @apply inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium;
+}
+
+.ui-table {
+  @apply w-full border-collapse text-sm;
+}
+
+.ui-th {
+  @apply border-b border-gray-200 bg-gray-50 px-4 py-3 text-left text-xs font-medium text-gray-500;
+}
+
+.ui-td {
+  @apply border-b border-gray-100 px-4 py-3 align-middle;
+}
+
+.ui-btn {
+  @apply inline-flex items-center rounded-lg border border-gray-200 bg-white px-3 py-1.5 text-sm text-gray-700 transition-colors hover:border-gray-300;
+}
+
+.ui-input {
+  @apply w-full rounded-lg border border-gray-200 bg-white px-3.5 py-2.5 text-sm text-gray-900 transition-colors placeholder:text-gray-400 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 focus:outline-none;
+}
+
+.ui-select {
+  @apply rounded-lg border border-gray-200 bg-white px-2.5 py-1.5 text-sm text-gray-700 focus:border-brand-500 focus:ring-2 focus:ring-brand-100 focus:outline-none;
+}
+
+.ui-chip {
+  @apply inline-flex cursor-pointer items-center rounded-full border px-3 py-1 text-xs transition-colors;
+}
+
+.ui-pill {
+  @apply inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-xs text-gray-600 transition-colors hover:border-brand-300 hover:text-brand-700;
+}
+
+/* 表格文字换行规则
+   - keep-all：禁止在 CJK 字符之间断行，中文只在标点、空格处换行
+     （否则浏览器会在任意字符间断，出现「麦芽 / 糖」「微甜或不 / 甜」这种拆词）
+   - break-word：兜底，遇到超长且无断点（如长英文单词）时仍允许强制断开，避免撑破容器
+   - 两者配合 + 表格容器自身的 overflow-x-auto，窄屏下退化为横向滚动而不是挤压变形 */
+.ui-td,
+.ui-th {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
