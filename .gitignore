@@ -1,0 +1,12 @@
+# 依赖：只在本地构建样式时需要，部署时完全用不到
+node_modules/
+
+# 本地临时文件
+*.log
+.DS_Store
+Thumbs.db
+_shots/
+_*.txt
+
+# 注意：assets/css/tailwind.css 虽然是构建产物，但必须提交。
+# GitHub Pages 不会执行 npm run build，少了它整站没有样式。
